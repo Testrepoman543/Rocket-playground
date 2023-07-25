@@ -25,7 +25,7 @@ fn world() -> &'static str {
 }
 
 #[get("/update")]
-fn world() -> &'static str {
+fn update() -> &'static str {
     "the update worked"
 }
 
@@ -82,7 +82,7 @@ fn rocket() -> _ {
     use rocket::fairing::AdHoc;
 
     rocket::build()
-        .mount("/", routes![hello])
+        .mount("/", routes![hello, update])
         .mount("/hello", routes![world, mir])
         .mount("/wave", routes![wave])
         .attach(AdHoc::on_request("Compatibility Normalizer", |req, _| Box::pin(async move {
