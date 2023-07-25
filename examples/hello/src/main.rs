@@ -24,6 +24,11 @@ fn world() -> &'static str {
     "Hello, world!"
 }
 
+#[get("/update")]
+fn world() -> &'static str {
+    "the update worked"
+}
+
 // Try visiting:
 //   http://127.0.0.1:8000/hello/мир
 #[get("/мир")]
