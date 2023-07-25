@@ -31,7 +31,7 @@ fn update() -> &'static str {
 
 // Try visiting:
 //   http://127.0.0.1:8000/hello/мир
-#[get("/мир")]
+#[get("/trythis")]
 fn mir() -> &'static str {
     "Привет, мир!"
 }
